@@ -1,6 +1,11 @@
 package com.company;
 import java.util.Scanner;
 public class SinRefactorizar {
+
+    /**
+     * Main del programa
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner teclado=new Scanner(System.in);
         System.out.println("Introduce el número para la criba de Erastótenes:");
@@ -13,6 +18,12 @@ public class SinRefactorizar {
 
     }
 
+    /**
+     * Método para imprimir resultados
+     * @param vector
+     * @param dato
+     * @param caso
+     */
     public static void imprimirGeneral(int[] vector, int dato, boolean caso) {
 
         if (caso) {
@@ -31,13 +42,23 @@ public class SinRefactorizar {
 
     }
 
+    /**
+     * Método para crear un vector con el número que le hemos dado
+     * @param dato
+     * @return
+     */
     public static int[] crearVector(int dato) {
         int vector[] =new int[dato];
         System.out.println("\nVector inicial hasta :"+ dato);
         return  vector;
     }
 
-    // Generar números primos de 1 a max
+    /**
+     * método para generar números primos de 1 a max
+     *
+     * @param max
+     * @return
+     */
     public static int[] generarPrimos (int max)
     {
         int i,j;
@@ -62,6 +83,12 @@ public class SinRefactorizar {
         }
     }
 
+    /**
+     *  método para contar
+     * @param dim
+     * @param esPrimo
+     * @return
+     */
     public static int getCuenta(int dim, boolean[] esPrimo) {
         int i;
         int cuenta = 0;
@@ -88,6 +115,11 @@ public class SinRefactorizar {
         return primos;
     }
 
+    /**
+     * Método booleano para comprobar si es primo
+     * @param dim
+     * @return
+     */
     public static boolean[] getBooleans(int dim) {
         int i;
         boolean[] esPrimo = new boolean[dim];
